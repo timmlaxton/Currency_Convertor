@@ -1,0 +1,60 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+body {
+  background-color: #E2E2E2;
+  display: flex;
+  justify-content: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#app {
+  width: 70vw;
+  margin-top: 10vh;
+  height: 45vh;
+  background-color: #247BA0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  border-radius: 50px;
+}
+
+i {
+  cursor: pointer;
+  color: #FB3640;
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  height: 5vhl;
+  justify-content: space-around;
+}
+
+form>*{
+  margin: 0.6vw;
+}
+
+h1, output {
+  font-size: 2rem;
+  margin: 3vw;
+}
+
+output {
+  background-color: #FB3640;
+  color: white;
+  padding: 1vw 3vw 0.7vw 3vw;
+  border-radius: 50px;
+  font-size: 2.5rem;
+}
+
+input {
+  font-family: 'Josefin Sans', sans-serif;
+}

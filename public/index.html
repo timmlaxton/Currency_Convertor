@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="js/bundle.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha38450oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Currency Converter</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Currency Converter</h1>
+    <form id="currencyForm">
+      <span>Convert</span>
+      <input type="number" v-model="baseInput" min="0">
+      <select v-model="base" @change="updateCurrencies">
+        <option v-for="(value, key) in rates"> {{ key }} </option>
+      </select>
+      <span><a v-on:click="swapCurrencies"><i class="fas fa-exchange-alt"></i></a></span>
+      <select v-model="selectedCurrency" @change="updateCurrencies">
+        <option v-for="(value, key) in rates"> {{ key }} </option>
+      </select>
+    </form>
+    <output for="currencyForm" v-if="baseInput !== 0">{{ converted }}</output>
+  </div>
+</body>
+</html>
